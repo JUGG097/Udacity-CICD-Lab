@@ -67,6 +67,7 @@ jobs:
             else
               return 1
             fi
+      - destroy_environment
           
 
 # Invoke jobs via workflows
@@ -74,7 +75,7 @@ jobs:
 workflows:
   Create Infrastructure:
     jobs:
-      # - create_infrastructure
+      - create_infrastructure
       # - configure_infrastructure
       - smoke_test
       
